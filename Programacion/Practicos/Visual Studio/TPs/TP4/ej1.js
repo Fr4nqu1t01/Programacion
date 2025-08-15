@@ -205,63 +205,61 @@ parImpar()
 
 /*13. Simular una contraseña guardada en la función y pedir al usuario que intente 
 adivinarla (máximo 3 intentos).*/
-/*
-function contraseña() {
-  const prompt = require(`prompt-sync`)();
-  let contraseña = "Fr4nqu1t0";
-  let usuario;
-  let contador = 3;
-  while (contador > 0 && usuario !== contraseña) {
-    usuario = prompt("intente adivinar la contraseña: ");
-    if (usuario === contraseña) {
-      console.log("Felicidades! usted adivino la contraseña.");
-      contador = 0;
-    } else {
-      contador--;
-      console.log(
-        `Contraseña incorrecta. tiene ${contador} intentos restantes.`
-      );
-    }
-    if (contador === 0 && usuario !== contraseña) {
-      console.log(
-        "Limite de intentos alcanzado. No pudo adivinar la contraseña. La contraseña era:",
-        contraseña
-      );
+function Ej13() {
+  function contraseña() {
+    const prompt = require(`prompt-sync`)();
+    let contraseña = "Fr4nqu1t0";
+    let usuario;
+    let contador = 3;
+    while (contador > 0 && usuario !== contraseña) {
+      usuario = prompt("intente adivinar la contraseña: ");
+      if (usuario === contraseña) {
+        console.log("Felicidades! usted adivino la contraseña.");
+        contador = 0;
+      } else {
+        contador--;
+        console.log(`Contraseña incorrecta. tiene ${contador} intentos restantes.`);
+      }
+      if (contador === 0 && usuario !== contraseña) {
+        console.log("Limite de intentos alcanzado. No pudo adivinar la contraseña. La contraseña era:", contraseña);
+      }
     }
   }
+
+  contraseña();
 }
-
-contraseña();*/
-
 /*14. Simular un carrito de compras. Dentro de la función hay precios de productos, 
 mostrar el total de la compra.*/
-
-function carrito() {
-  let camisa = 13000,
-    remera = 23000,
-    pantalon = 18000,
-    ticket = 0,
-    gorra = 8000,
-    mochila = 35000;
-  let carrito = [camisa, remera, pantalon, gorra, mochila];
-  for (let i = 0; i < carrito.length; i++) {
-    ticket = ticket + carrito[i];
+function ej14() {
+  function carrito() {
+    let camisa = 13000,
+      remera = 23000,
+      pantalon = 18000,
+      ticket = 0,
+      gorra = 8000,
+      mochila = 35000;
+    let carrito = [camisa, remera, pantalon, gorra, mochila];
+    for (let i = 0; i < carrito.length; i++) {
+      ticket = ticket + carrito[i];
+    }
+    console.log("Precio total de la compra:", ticket);
   }
-  console.log("Precio total de la compra:", ticket);
+
+  carrito();
 }
-
-carrito();
-
 /*15. Crear una tabla de multiplicar del 1 al 10 (por ejemplo: 1x1 hasta 10x10)*/
-
-function multiplicar() {
-  let multiplicacion = 0;
-  for (let i = 1; i <= 10; i++) {
-    for (let j = 1; j <= 10; j++) {
-      multiplicacion = i * j;
-      console.log(`${i} x ${j} = ${multiplicacion}`);
+function Ej15() {
+  function multiplicar() {
+    let multiplicacion = 0;
+    for (let i = 1; i <= 10; i++) {
+      for (let j = 1; j <= 10; j++) {
+        multiplicacion = i * j;
+        console.log(`${i} x ${j} = ${multiplicacion}`);
+      }
     }
   }
+
+  multiplicar();
 }
 
-multiplicar();
+Ej13();
