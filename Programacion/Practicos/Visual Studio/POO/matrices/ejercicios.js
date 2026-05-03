@@ -4,6 +4,11 @@ const matriz = [
   [7, 8, 9],
 ];
 
+const matriz2 = [
+  [1,2],
+  [3,4],
+  [5,6]
+]
 const ejercicio1 = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
@@ -250,6 +255,31 @@ const ejercicio16 = (arr) => {
 
 //console.log(ejercicio16(matriz));
 
-const ejercicio17 = () => {
-  
+const ejercicio17 = (m1,m2) => {
+  function colm1Filam2(m1,m2){
+    return m1[0].length == m2.length;
+  }
+  function multiplicacion(m1,m2) {
+    let m3 = [];
+    for (let i = 0; i < m1.length; i++){
+      if (m3[i] == undefined)
+        m3[i] = [];
+      for (let j = 0; j < m2[0].length; j++){
+        let suma = 0;
+        for (let k = 0; k < m2.length; k++){
+          suma += m1[i][k] * m2[k][j];
+        }
+        m3[i].push(suma);
+      }
+    }
+    return m3;
+  }
+  if (colm1Filam2(m1,m2))
+    return multiplicacion(m1,m2);
+  else 
+    return `las columnas de m1 no son iguales a las fila de m2.
+  columnas de m1: ${m1[0].length}
+  filas de m2: ${m2.length}`;
 }
+
+console.log(ejercicio17(matriz,matriz2));
