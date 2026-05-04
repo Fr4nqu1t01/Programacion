@@ -283,3 +283,48 @@ const ejercicio17 = (m1,m2) => {
 }
 
 console.log(ejercicio17(matriz,matriz2));
+
+const ejercicio18 = (m) => {
+  function esCuadrada (m){
+    let i = 0;
+    let cuadrada = true;
+    while (cuadrada == true && i < m.length) {
+      if(m[i].length !== m.length) {
+        cuadrada = false;
+      }
+      i++;
+    }
+    return cuadrada;
+  }
+
+  function identidad (m) {
+    let i = 0;
+    let j = 0;
+    let iden = true;
+    while(iden == true && i < m.length) {
+      if (m[i][i] !== 1) {
+        iden = false;
+      }
+      while (iden == true && j m[i].length){
+        if ( i !== j && m[i][j].length) {
+          iden = false;
+        }
+        j++;
+      } 
+      i++;
+      j = 0;
+    }
+    return iden;
+  }
+  if (esCuadrada(m)) {
+    if (identidad(m)) {
+      console.log(`la matriz es identidad.`);
+    }
+    else {
+      console.log(`la matriz NO es identidad.`);
+    }
+  }
+  else {
+    console.log(`La matriz NO es cuadrada.`);
+  }
+}
