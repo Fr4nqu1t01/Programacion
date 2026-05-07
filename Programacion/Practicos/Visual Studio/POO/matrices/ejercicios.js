@@ -1,7 +1,7 @@
 const matriz = [
   [1, 2, 3],
   [4, 5, 6],
-  [7, 8, 9],
+  [7, 8, 9]
 ];
 
 const matriz2 = [
@@ -305,8 +305,8 @@ const ejercicio18 = (m) => {
       if (m[i][i] !== 1) {
         iden = false;
       }
-      while (iden == true && j m[i].length){
-        if ( i !== j && m[i][j].length) {
+      while (iden == true && j < m[i].length){
+        if ( i !== j && m[i][j] !== 0) {
           iden = false;
         }
         j++;
