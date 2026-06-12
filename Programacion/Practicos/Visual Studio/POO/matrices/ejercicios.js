@@ -282,7 +282,7 @@ const ejercicio17 = (m1,m2) => {
   filas de m2: ${m2.length}`;
 }
 
-console.log(ejercicio17(matriz,matriz2));
+//console.log(ejercicio17(matriz,matriz2));
 
 const ejercicio18 = (m) => {
   function esCuadrada (m){
@@ -328,3 +328,24 @@ const ejercicio18 = (m) => {
     console.log(`La matriz NO es cuadrada.`);
   }
 }
+// console.log(ejercicio18(matriz));
+
+const ejercicio19 = (m) => {
+
+  let contador = {};
+  for (let i = 0; i < m.length; i++) {
+    for (let j = 0; j < m[i].length; j++) {
+      let valor = m[i][j];
+      if (contador[valor] == undefined) {
+        contador[valor] = 1;
+      }
+      else {
+        contador[valor]++;
+      }
+    }
+
+}
+  return contador;
+}
+
+console.log(ejercicio19(matriz));
