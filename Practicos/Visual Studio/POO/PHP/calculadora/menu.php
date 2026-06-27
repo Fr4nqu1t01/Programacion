@@ -1,5 +1,5 @@
 <?php
-//testing
+
 require_once('C:\Users\Thomiiii\Desktop\Franco\Programacion\Practicos\Visual Studio\POO\PHP\calculadora\calculadora.php');
 
 function pausa()

@@ -1,5 +1,5 @@
 <?php
-//wasaaa
+
 while ($opcion !== 0){
 
     echo "sistema de gestion bancaria \n";
