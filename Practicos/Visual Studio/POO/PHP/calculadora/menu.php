@@ -24,7 +24,6 @@ function menu()
 
         $opcion = readline("ingrese una opcion: ");
         if ($opcion > 0 && $opcion <= 4) {
-
             do {
                 do {
                     $num = readline("Ingrese un valor: ");
